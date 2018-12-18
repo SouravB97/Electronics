@@ -20,7 +20,7 @@ uint16_t initialCountTime = 0;        //This will store the time when we have re
 //=====================>> SETUP <<======================================
 void setup() {
   pinMode(dPin, INPUT);
-  Timer1.initialize(resetInitialCount);   //Initializing Software Interrupts
+  Timer1.initialize(resetInitialCountTime);   //Initializing Software Interrupts
   Timer1.attachInterrupt(resetInitialCount);    //Attaching software interrupt
   
   attachInterrupt(digitalPinToInterrupt(dPin), raiseCount, FALLING); //Attaching the interrupts
